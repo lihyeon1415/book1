@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+#slider {
+    height: 415px;
+}
+
+#slider .swiper-pagination-bullet-active {
+    background-color: red;
+}
+
+#slider .swiper-slide {
+    justify-content: space-evenly;
+}
+
+#slider .slide_content {
+    width: 30%;
+    height: 90%;
+    border-radius: 20px;
+    background-color: beige;
+}
+
+
+#section1 {
+    height: 350px;
+}
+
+#section1 .swiper {
+    height: 90%;
+}

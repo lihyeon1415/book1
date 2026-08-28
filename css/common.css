@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* swiper.js css */
+html,
+body {
+position: relative;
+height: 100%;
+}
+
+body {
+font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+font-size: 14px;
+color: #fff;
+margin: 0;
+padding: 0;
+}
+
+.swiper {
+width: 100%;
+height: 100%;
+}
+
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #444;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+/* 페이지 공통 */
+.container {
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 115px;
+    background-color: gold;
+}
+
+#header_top {
+    height: 50%;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header_top .logo {
+    width: 70px;
+    height: 30px;
+    background-color: #999;
+}
+
+#header_top .right {
+    width: 390px;
+    height: 30px;
+    background-color: #999;   
+}
+
+#header_main {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: peru;
+}
+
+#header_main .left {
+    width: 285px;
+    height: 30px;
+    background-color: #999;
+}
+
+#header_main .right {
+    width: 210px;
+    height: 30px;
+    background-color: #999;
+}
+
+
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 350px;
+    border-top: 1px solid #eee;
+    background-color: #ddd;
+}
+
+#footer_top {
+    height: 190px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    background-color: skyblue;   
+}
+
+#footer_top .left {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+#footer_top .left ul {
+    width: 20%;
+    height: 100%;
+    background-color: purple;
+}
+
+#footer_top .right{
+    width: 28%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: tomato;
+}
+
+#footer_top .right .icon {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    
+}
+
+#footer_bottom {
+    height: calc(100% - 190px);
+    background-color: orange;
+}
