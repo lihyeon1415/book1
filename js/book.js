@@ -45,10 +45,23 @@ async function fetchBooks(query) {
                         <button>click</button>
                         `
                     });
+                    var slider_swiper = new Swiper('.mySwiper', {
+                    navigation: {
+                    nextEl: '#slider .swiper-button-next',
+                    prevEl: '#slider .swiper-button-prev',
+                    },
+                    pagination: {
+                    el: '#slider .swiper-pagination',
+                    clickable: true,
+                    renderBullet : function (index, className) {
+
+                    }
+                    },
+                    });
                 }
-            } catch (error) {
-                console.error('에러 발생:', error);
+             } catch(error) {
+                    console.error('에러발생:', error);
             }
-        }
 
         bookData();
+        }

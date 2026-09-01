@@ -7,9 +7,44 @@
 #slider .swiper-pagination-bullet-active {
     background-color: red;
 }
+#slider .container{
+    position: relative;
+}
+    #slider.swiper {height: 50%;}
 
+#slider .swiper-button-next{
+    border: 1px solid #aaa;
+    border-radius : 50%;
+    right: -50px;
+}
+#slider .swiper-button-prev{
+    border: 1px solid #aaa;
+    border-radius : 50%;
+    left: -50px;
+
+#slider .swiper-navigation-icon{
+    color: red;
+    width: 50%;
+    height: 50%;    
+}
+
+#slider.swiper-pagination{
+    height:100px;
+}
+#slider .swiper-pagination img {
+    width:80px;
+    height: auto;
+    border-radius:0;
+}
+
+#slider .swiper-pagination-bullet-active{
+    background-color: red;
+}
 #slider .swiper-slide {
     justify-content: space-evenly;
+}
+
+
 }
 
 #slider .slide_content {
