@@ -1,149 +1,351 @@
 @charset "utf-8";
+/* =========================
+   공통
+========================= */
 
-/* swiper.js css */
-html,
-body {
-position: relative;
-height: 100%;
-}
-
-body {
-font-family:
-    Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-font-size: 14px;
-color: #fff;
-margin: 0;
-padding: 0;
-}
-
-.swiper {
-width: 100%;
-height: 100%;
-}
-
-.swiper-slide {
-text-align: center;
-font-size: 18px;
-background: #444;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.swiper-slide img {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-
-/* 페이지 공통 */
 .container {
-    width: 1120px;
+    width: min(1120px, calc(100% - 40px));
     height: 100%;
     margin: 0 auto;
-    background-color: pink;
 }
 
-/* 헤더 */
+
+/* =========================
+   헤더
+========================= */
+
 header {
-    width: 100%;
-    height: 115px;
-    background-color: gold;
+    height: 128px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-#header_top {
-    height: 50%;
-    background-color: aqua;
+.header-inner {
     display: flex;
+    flex-direction: column;
+}
+
+
+/* 상단 헤더 */
+
+.header-top {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+
+/* 로고 */
+
+.logo {
+    width: 78px;
+    height: 38px;
+
+    display: flex;
     align-items: center;
 }
 
-#header_top .logo {
-    width: 70px;
-    height: 30px;
-    background-color: #999;
+.logo img {
+    width: 78px;
+    height: auto;
 }
 
-#header_top .right {
-    width: 390px;
-    height: 30px;
-    background-color: #999;   
-}
 
-#header_main {
-    height: 50%;
+/* 로그인 / 회원가입 / 아이콘 */
+
+.header-actions {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: peru;
+    gap: 8px;
 }
 
-#header_main .left {
-    width: 285px;
-    height: 30px;
-    background-color: #999;
+.icon-btn {
+    padding: 4px 12px;
+
+    font-size: 30px;
+    line-height: 1;
 }
 
-#header_main .right {
-    width: 210px;
-    height: 30px;
-    background-color: #999;
+.login-btn,
+.signup-btn {
+    padding: 9px 13px;
+
+    font-size: 13px;
+}
+
+.signup-btn {
+    color: #fff;
+    background: #1e8cff;
+    border-radius: 5px;
 }
 
 
-/* 푸터 */
+/* 메인 헤더 */
+
+.header-main {
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* GNB 메뉴 */
+
+.gnb {
+    display: flex;
+    gap: 30px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.gnb a {
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.gnb a.active {
+    color: #1683e6;
+}
+
+.gnb a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 3px;
+
+    background: #1683e6;
+    border-radius: 3px;
+}
+
+
+/* 우측 메뉴 */
+
+.header-tools {
+    display: flex;
+    gap: 18px;
+
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================
+   책 / 콘텐츠 섹션
+========================= */
+
+.book-section {
+    padding: 58px 0;
+}
+
+.light-section {
+    background: #fafafa;
+}
+
+
+/* 섹션 제목 */
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    letter-spacing: -0.8px;
+}
+
+.section-heading a {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* 작은 제목 */
+
+.eyebrow {
+    margin-bottom: 6px;
+
+    color: #1683e6;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================
+   푸터
+========================= */
+
 footer {
-    width: 100%;
-    height: 350px;
-    border-top: 1px solid #eee;
-    background-color: #ddd;
+    background: #f6f6f6;
+    border-top: 1px solid #e9e9e9;
 }
 
-#footer_top {
-    height: 190px;
+
+/* 푸터 상단 */
+
+.footer-top {
+    padding: 42px 0 36px;
+
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    background-color: skyblue;   
 }
 
-#footer_top .left {
-    width: 60%;
-    height: 100%;
+
+/* 푸터 링크 */
+
+.footer-links {
+    width: 65%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.footer-links div {
     display: flex;
-    justify-content: space-between;
-    background-color: aquamarine;
+    flex-direction: column;
+    gap: 10px;
+
+    color: #777;
+    font-size: 12px;
 }
 
-#footer_top .left ul {
-    width: 20%;
-    height: 100%;
-    background-color: purple;
+.footer-links strong {
+    margin-bottom: 3px;
+
+    color: #222;
+    font-size: 13px;
 }
 
-#footer_top .right{
-    width: 28%;
-    height: 100%;
+
+/* SNS 아이콘 */
+
+.socials {
     display: flex;
-    justify-content: space-between;
-    background-color: tomato;
+    gap: 9px;
 }
 
-#footer_top .right .icon {
-    width: 45px;
-    height: 45px;
+.socials a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border: 1px solid #ddd;
     border-radius: 50%;
-    
+
+    font-weight: 700;
 }
 
-#footer_bottom {
-    height: calc(100% - 190px);
-    background-color: orange;
+
+/* 푸터 하단 */
+
+.footer-bottom {
+    padding: 24px 0 36px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    border-top: 1px solid #e4e4e4;
+
+    color: #999;
+    font-size: 11px;
+}
+
+.footer-bottom strong {
+    color: #1683e6;
+    font-size: 16px;
+}
+
+.footer-bottom small {
+    margin-left: auto;
+}
+
+
+/* =========================
+   반응형
+   760px 이하
+========================= */
+
+@media (max-width: 760px) {
+
+    /* 공통 */
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+
+    /* 헤더 */
+
+    header {
+        height: 112px;
+    }
+
+    .header-top {
+        height: 60px;
+    }
+
+    .header-main {
+        height: 52px;
+    }
+
+
+    /* GNB */
+
+    .gnb {
+        gap: 16px;
+        font-size: 13px;
+    }
+
+
+    /* 우측 헤더 메뉴 숨김 */
+
+    .header-tools {
+        display: none;
+    }
+
+
+    /* 푸터 */
+
+    .footer-links {
+        width: 100%;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom small {
+        width: 100%;
+        margin-left: 0;
+    }
 }

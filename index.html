@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>리디 | 책과 웹툰을 한 곳에서</title>
+
+
+    <!-- ========================================
+         Swiper CSS
+    ======================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    >
+
+
+    <!-- ========================================
+         내가 만든 CSS
+    ======================================== -->
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+
+<body>
+
+    <div id="wrap">
+
+
+        <!-- ========================================
+             HEADER
+        ======================================== -->
+
+        <header>
+
+            <div class="container header-inner">
+
+
+                <!-- 상단 헤더 -->
+
+                <div class="header-top">
+
+                    <!-- 로고 -->
+
+                    <a
+                        class="logo"
+                        href="#"
+                        aria-label="리디 홈"
+                    >
+
+                        <img
+                            src="/img/ridi-logo.png"
+                            alt="로고"
+                        >
+
+                    </a>
+
+
+                    <!-- 로그인 / 회원가입 -->
+
+                    <div class="header-actions">
+
+                        <button
+                            type="button"
+                            class="icon-btn"
+                            aria-label="검색"
+                        >
+                            ⌕
+                        </button>
+
+                        <button
+                            type="button"
+                            class="login-btn"
+                        >
+                            로그인
+                        </button>
+
+                        <button
+                            type="button"
+                            class="signup-btn"
+                        >
+                            회원가입
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 메인 메뉴 -->
+
+                <div class="header-main">
+
+                    <nav
+                        class="gnb"
+                        aria-label="주 메뉴"
+                    >
+
+                        <a
+                            class="active"
+                            href="#slider"
+                        >
+                            홈
+                        </a>
+
+                        <a href="#section1">
+                            리디 발견
+                        </a>
+
+                        <a href="#section2">
+                            베스트셀러
+                        </a>
+
+                        <a href="#section3">
+                            신간
+                        </a>
+
+                    </nav>
+
+
+                    <!-- 우측 메뉴 -->
+
+                    <div class="header-tools">
+
+                        <span>
+                            내 서재
+                        </span>
+
+                        <span>
+                            이용권
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ========================================
+             MAIN
+        ======================================== -->
+
+        <main>
+
+
+            <!-- ========================================
+                 메인 슬라이더
+            ======================================== -->
+
+            <section id="slider">
+
+                <div class="container">
+
+                    <div class="swiper mySwiper">
+
+                        <!-- 슬라이드가 들어가는 영역 -->
+
+                        <div
+                            class="swiper-wrapper"
+                            id="hero-slides"
+                        >
+                        </div>
+
+
+                        <!-- 이전 버튼 -->
+
+                        <button
+                            class="swiper-button-prev"
+                            aria-label="이전"
+                        >
+                        </button>
+
+
+                        <!-- 다음 버튼 -->
+
+                        <button
+                            class="swiper-button-next"
+                            aria-label="다음"
+                        >
+                        </button>
+
+
+                        <!-- 페이지네이션 -->
+
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 리디 발견
+            ======================================== -->
+
+            <section
+                id="section1"
+                class="book-section"
+            >
+
+                <div class="container">
+
+
+                    <!-- 섹션 제목 -->
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                RIDI PICK
+                            </p>
+
+                            <h2>
+                                리디 발견
+                            </h2>
+
+                        </div>
+
+
+                        <a href="#">
+                            전체 보기 →
+                        </a>
+
+                    </div>
+
+
+                    <!-- 책 Swiper -->
+
+                    <div class="swiper s1Swiper">
+
+                        <div
+                            class="swiper-wrapper"
+                            id="discovery-list"
+                        >
+                        </div>
+
+
+                        <!-- 이전 버튼 -->
+
+                        <button
+                            class="swiper-button-prev"
+                            aria-label="이전"
+                        >
+                        </button>
+
+
+                        <!-- 다음 버튼 -->
+
+                        <button
+                            class="swiper-button-next"
+                            aria-label="다음"
+                        >
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 베스트셀러
+            ======================================== -->
+
+            <section
+                id="section2"
+                class="book-section light-section"
+            >
+
+                <div class="container">
+
+
+                    <!-- 섹션 제목 -->
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                BEST
+                            </p>
+
+                            <h2>
+                                지금 많이 읽는 책
+                            </h2>
+
+                        </div>
+
+
+                        <a href="#">
+                            전체 보기 →
+                        </a>
+
+                    </div>
+
+
+                    <!-- 베스트셀러 책 목록 -->
+
+                    <div
+                        class="book-grid"
+                        id="best-list"
+                    >
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 프로모션
+            ======================================== -->
+
+            <section
+                id="section3"
+                class="promo-section"
+            >
+
+                <div class="container promo">
+
+
+                    <!-- 프로모션 내용 -->
+
+                    <div>
+
+                        <p>
+                            RIDI ORIGINAL
+                        </p>
+
+                        <h2>
+                            새로운 이야기를<br>
+                            가장 먼저 만나보세요.
+                        </h2>
+
+                        <button>
+                            추천 작품 보기
+                        </button>
+
+                    </div>
+
+
+                    <!-- 장식용 RIDI -->
+
+                    <div class="promo-mark">
+                        RIDI
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <!-- ========================================
+             FOOTER
+        ======================================== -->
+
+        <footer>
+
+            <div class="container">
+
+
+                <!-- 푸터 상단 -->
+
+                <div class="footer-top">
+
+
+                    <!-- 푸터 메뉴 -->
+
+                    <div class="footer-links">
+
+
+                        <!-- 고객 -->
+
+                        <div>
+
+                            <strong>
+                                고객
+                            </strong>
+
+                            <a href="#">
+                                공지사항
+                            </a>
+
+                            <a href="#">
+                                자주 묻는 질문
+                            </a>
+
+                            <a href="#">
+                                고객센터
+                            </a>
+
+                        </div>
+
+
+                        <!-- 서비스 -->
+
+                        <div>
+
+                            <strong>
+                                서비스
+                            </strong>
+
+                            <a href="#">
+                                리디북스
+                            </a>
+
+                            <a href="#">
+                                리디셀렉트
+                            </a>
+
+                            <a href="#">
+                                리디페이퍼
+                            </a>
+
+                        </div>
+
+
+                        <!-- 기타문의 -->
+
+                        <div>
+
+                            <strong>
+                                기타문의
+                            </strong>
+
+                            <a href="#">
+                                제휴 문의
+                            </a>
+
+                            <a href="#">
+                                콘텐츠 문의
+                            </a>
+
+                        </div>
+
+
+                        <!-- 회사 -->
+
+                        <div>
+
+                            <strong>
+                                회사
+                            </strong>
+
+                            <a href="#">
+                                회사소개
+                            </a>
+
+                            <a href="#">
+                                채용
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SNS -->
+
+                    <div class="socials">
+
+                        <a
+                            href="#"
+                            aria-label="instagram"
+                        >
+                            ◎
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="youtube"
+                        >
+                            ▶
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="facebook"
+                        >
+                            f
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="x"
+                        >
+                            𝕏
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 푸터 하단 -->
+
+                <div class="footer-bottom">
+
+                    <strong>
+                        RIDI
+                    </strong>
+
+                    <span>
+                        사업자 정보 · 이용약관 · 개인정보처리방침 ·
+                        청소년보호정책
+                    </span>
+
+                    <small>
+                        © RIDI Corp. All rights reserved.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <!-- ========================================
+         JavaScript
+    ======================================== -->
+
+    <!-- Swiper JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"
+    ></script>
+
+
+    <!-- 도서 API -->
+
+    <script src="./js/book.js"></script>
+
+
+    <!-- Swiper 설정 -->
+
+    <script src="./js/swiper.js"></script>
+
+</body>
+
+</html>

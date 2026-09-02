@@ -1,54 +1,115 @@
-//
-var slider_swiper = new Swiper('.mySwiper', {
-        navigation: {
-          nextEl: '#slider .swiper-button-next',
-          prevEl: '#slider .swiper-button-prev',
+/* ========================================
+   Swiper 변수
+======================================== */
+
+let sliderSwiper;
+let discoverySwiper;
+
+
+/* ========================================
+   Swiper 초기화
+======================================== */
+
+function initSwipers() {
+
+    /* 기존 Swiper 삭제 */
+
+    if (sliderSwiper) {
+        sliderSwiper.destroy(true, true);
+    }
+
+    if (discoverySwiper) {
+        discoverySwiper.destroy(true, true);
+    }
+
+
+    /* ========================================
+       메인 슬라이더
+    ======================================== */
+
+    sliderSwiper = new Swiper(".mySwiper", {
+
+        // 무한 반복
+        loop: true,
+
+        // 슬라이드 사이 간격
+        spaceBetween: 20,
+
+        // 자동 재생
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false
         },
+
+        // 이전 / 다음 버튼
+        navigation: {
+            nextEl: "#slider .swiper-button-next",
+            prevEl: "#slider .swiper-button-prev"
+        },
+
+        // 페이지네이션
         pagination: {
-          el: '#slider .swiper-pagination',
-          clickable: true,
-        },
-      });
-
-      var section1_swiper = new Swiper('.s1Swiper', {
-        slidesPerView: 6,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: '#section1 .swiper-button-next',
-          prevEl: '#section1 .swiper-button-prev',
-        },
-      });
-
-      async function sliderData() {
-            try {
-                // query와 section ID를 매핑
-                const queries = [
-                    { query: "요리", sectionId: "#slider" },
-                ];
-
-                for (const { query, sectionId } of queries) {
-                    const data = await fetchBooks(query);
-
-                    // 해당 섹션 내의 .box 요소 8개 선택
-                    const section = document.querySelector(`#${sectionId}`);
-                    const boxElements = section.querySelectorAll(".slide-content");
-
-                    boxElements.forEach((box, i) => {
-                        const doc = data.documents[i];
-                        if (!doc) return;
-
-                        // 요소 생성 및 추가
-                        box.innerHTML = `<img src="${doc.thumbnail}">
-                        <h3>${doc.title}</h3>
-                        <h6>${doc.authors}</h6>
-                        <p>${doc.contents.substring(0, 60)}</p>
-                        <button>click</button>
-                        `
-                    });
-                }
-            } catch(error) {
-                console.error('에러 발생:', error);
-            }
+            el: "#slider .swiper-pagination",
+            clickable: true
         }
 
-      sliderData();
+    });
+
+
+    /* ========================================
+       리디 발견 슬라이더
+    ======================================== */
+
+    discoverySwiper = new Swiper(".s1Swiper", {
+
+        // 기본 화면에서는 2개 표시
+        slidesPerView: 2,
+
+        // 카드 사이 간격
+        spaceBetween: 12,
+
+        // 화면 크기에 따른 카드 개수
+        breakpoints: {
+
+            // 650px 이상
+            650: {
+                slidesPerView: 3,
+                spaceBetween: 14
+            },
+
+            // 900px 이상
+            900: {
+                slidesPerView: 6,
+                spaceBetween: 14
+            }
+
+        },
+
+        // 이전 / 다음 버튼
+        navigation: {
+            nextEl: "#section1 .swiper-button-next",
+            prevEl: "#section1 .swiper-button-prev"
+        }
+
+    });
+}
+
+
+/* ========================================
+   페이지 로딩 완료 후 실행
+======================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    initSwipers
+);
+
+
+/* ========================================
+   책 데이터 로딩 완료 후 실행
+======================================== */
+
+window.addEventListener(
+    "books:loaded",
+    initSwipers
+);
