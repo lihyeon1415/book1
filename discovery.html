@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>리디 | 리디 발견</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub.css">
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+        <header>
+            <div class="container header-inner">
+
+                <!-- 상단 헤더 -->
+                <div class="header-top">
+
+                    <a
+                        class="logo"
+                        href="./index.html"
+                        aria-label="리디 홈"
+                    >
+                        RIDI
+                    </a>
+
+                    <div class="header-actions">
+                        <button
+                            class="icon-btn"
+                            id="searchToggle"
+                            type="button"
+                        >
+                            ⌕
+                        </button>
+
+                        <button
+                            class="login-btn"
+                            type="button"
+                        >
+                            로그인
+                        </button>
+
+                        <button
+                            class="signup-btn"
+                            type="button"
+                        >
+                            회원가입
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <!-- 메인 네비게이션 -->
+                <div class="header-main">
+
+                    <nav class="gnb">
+                        <a href="./index.html">홈</a>
+
+                        <a
+                            class="active"
+                            href="./discovery.html"
+                        >
+                            리디 발견
+                        </a>
+
+                        <a href="./index.html#section2">
+                            베스트셀러
+                        </a>
+
+                        <a href="./index.html#section3">
+                            신간
+                        </a>
+                    </nav>
+
+                    <div class="header-tools">
+                        <span>내 서재</span>
+                        <span>이용권</span>
+                    </div>
+
+                </div>
+
+
+                <!-- 검색 영역 -->
+                <form
+                    class="search-bar"
+                    id="searchForm"
+                >
+                    <input
+                        id="searchInput"
+                        placeholder="읽고 싶은 책을 검색해 보세요"
+                    >
+
+                    <button type="submit">
+                        검색
+                    </button>
+                </form>
+
+            </div>
+        </header>
+
+
+        <!-- =========================
+             MAIN
+        ========================== -->
+        <main>
+
+            <!-- 서브 히어로 -->
+            <section class="sub-hero">
+                <div class="container">
+
+                    <p class="eyebrow">
+                        RIDI DISCOVERY
+                    </p>
+
+                    <h1>
+                        취향에 맞는 이야기를<br>
+                        천천히 발견해보세요.
+                    </h1>
+
+                    <p>
+                        요리부터 개발, 에세이와 소설까지<br>
+                        지금 읽기 좋은 책을 한곳에 모았습니다.
+                    </p>
+
+                </div>
+            </section>
+
+
+            <!-- 카테고리 & 도서 추천 -->
+            <section class="category-section">
+                <div class="container">
+
+                    <!-- 카테고리 버튼 -->
+                    <div class="category-tabs">
+
+                        <button
+                            class="active"
+                            data-q="요리"
+                        >
+                            요리
+                        </button>
+
+                        <button data-q="소설">
+                            소설
+                        </button>
+
+                        <button data-q="에세이">
+                            에세이
+                        </button>
+
+                        <button data-q="경제">
+                            경제
+                        </button>
+
+                        <button data-q="바이브 코딩">
+                            개발
+                        </button>
+
+                    </div>
+
+
+                    <!-- 추천 도서 제목 -->
+                    <div class="section-heading">
+
+                        <div>
+                            <p class="eyebrow">
+                                RECOMMEND
+                            </p>
+
+                            <h2 id="title">
+                                요리 추천
+                            </h2>
+                        </div>
+
+                        <span id="count"></span>
+
+                    </div>
+
+
+                    <!-- 도서 목록 -->
+                    <div
+                        class="book-grid"
+                        id="list"
+                    >
+                        <div class="loading">
+                            책을 불러오는 중...
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 오늘의 추천 -->
+            <section class="curation">
+                <div class="container curation-inner">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            RIDI PICK
+                        </p>
+
+                        <h2>
+                            오늘의 한 권
+                        </h2>
+
+                        <p>
+                            가볍게 시작해서 오래 기억되는<br>
+                            이야기를 골라보세요.
+                        </p>
+
+                    </div>
+
+                    <a href="#list">
+                        추천 책 둘러보기 →
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+        <footer>
+            <div class="container">
+
+                <div class="footer-bottom">
+
+                    <strong>RIDI</strong>
+
+                    <span>
+                        사업자 정보 · 이용약관 ·
+                        개인정보처리방침 ·
+                        청소년보호정책
+                    </span>
+
+                    <small>
+                        © RIDI Corp. All rights reserved.
+                    </small>
+
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="./js/sub.js"></script>
+
+</body>
+
+</html>
